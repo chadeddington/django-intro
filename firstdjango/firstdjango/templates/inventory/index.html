@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h2>Index page</h2>
+
+	<table>
+		<tr>
+			<th>Item</th>
+			<th>Amount</th>
+		</tr>
+	{% for item in items %}
+		<tr>
+			<td><a href="{% url 'item_detail' item.id %}">{{ item.title | capfirst }}</a></td>
+			<td>{{ item.amount }}</td>
+		</tr> 
+	{% endfor %}
+	</table>
+		
+	
+{% endblock content %}

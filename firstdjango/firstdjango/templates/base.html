@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Inventory Project</title>
+		<link rel="stylesheet" href="{% static 'main.css' %}">
+	</head>
+	<body>
+		<div class="header">My Django Project</div>
+		{% block content %}
+		{% endblock content %}
+		<script src="{% static 'main.js' %}"></script>
+	</body>
+</html>
